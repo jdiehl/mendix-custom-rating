@@ -7,6 +7,17 @@ interface RatingControlsProps {
     onChange?: (value: number) => void;
 }
 
+function maxLevel(type: string): number {
+    switch (type) {
+        case "Happiness":
+            return 5;
+        case "StateOfMind":
+            return 4;
+        default:
+            throw new Error("Invalid type");
+    }
+}
+
 export function RatingControls({ type, value, onChange }: RatingControlsProps): ReactElement | null {
     if (type !== "Happiness" && type !== "StateOfMind") {
         console.error(`Invalid type: ${type}`);
@@ -14,7 +25,7 @@ export function RatingControls({ type, value, onChange }: RatingControlsProps): 
     }
 
     const controls: ReactElement[] = [];
-    for (let level = 1; level <= 5; level++) {
+    for (let level = 1; level <= maxLevel(type); level++) {
         const onClick = (): void => {
             if (level !== value && onChange) {
                 onChange(level);

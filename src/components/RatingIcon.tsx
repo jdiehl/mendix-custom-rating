@@ -22,15 +22,13 @@ const ICON: any = {
             1: require("../icons/StateOfMind_1.svg"),
             2: require("../icons/StateOfMind_2.svg"),
             3: require("../icons/StateOfMind_3.svg"),
-            4: require("../icons/StateOfMind_4.svg"),
-            5: require("../icons/StateOfMind_5.svg")
+            4: require("../icons/StateOfMind_4.svg")
         },
         disabled: {
             1: require("../icons/StateOfMind_1_disabled.svg"),
             2: require("../icons/StateOfMind_2_disabled.svg"),
             3: require("../icons/StateOfMind_3_disabled.svg"),
-            4: require("../icons/StateOfMind_4_disabled.svg"),
-            5: require("../icons/StateOfMind_5_disabled.svg")
+            4: require("../icons/StateOfMind_4_disabled.svg")
         }
     }
 };
