@@ -1,6 +1,7 @@
-import { ReactElement, createElement } from "react";
+import { ReactElement, createElement, Fragment } from "react";
 import { Big } from "big.js";
 import { RatingControls } from "./components/RatingControls";
+import { Alert } from "./components/Alert";
 
 import { CustomRatingContainerProps } from "../typings/CustomRatingProps";
 
@@ -18,5 +19,10 @@ export function CustomRating({ type, rateAttribute, onChange }: CustomRatingCont
         }
     };
 
-    return <RatingControls type={type} value={rateAttribute.value.toNumber()} onChange={update} />;
+    return (
+        <Fragment>
+            <RatingControls type={type} value={rateAttribute.value.toNumber()} onChange={update} />
+            <Alert>{rateAttribute.validation}</Alert>
+        </Fragment>
+    );
 }

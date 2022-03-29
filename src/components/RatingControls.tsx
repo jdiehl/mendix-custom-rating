@@ -14,7 +14,7 @@ export function RatingControls({ type, value, onChange }: RatingControlsProps): 
     }
 
     const controls: ReactElement[] = [];
-    for (let level = 5; level > 0; level--) {
+    for (let level = 1; level <= 5; level++) {
         const onClick = (): void => {
             if (level !== value && onChange) {
                 onChange(level);
